@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "043e8067-59ec-4d3e-92e8-3a2e498ca9c3",
+		"_postman_id": "dd339fe0-f2ab-4342-8767-b195b43af20d",
 		"name": "E-Commerce-Nodejs",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "49654548",
-		"_collection_link": "https://gordon5813681-7258258.postman.co/workspace/Sadman-Rashik's-Workspace~5e407b81-b835-455f-8e6a-64651963c09c/collection/49654548-043e8067-59ec-4d3e-92e8-3a2e498ca9c3?action=share&source=collection_link&creator=49654548"
+		"_collection_link": "https://gordon5813681-7258258.postman.co/workspace/Sadman-Rashik's-Workspace~5e407b81-b835-455f-8e6a-64651963c09c/collection/49654548-dd339fe0-f2ab-4342-8767-b195b43af20d?action=share&source=collection_link&creator=49654548"
 	},
 	"item": [
 		{
@@ -20,7 +20,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\":\"john\",\r\n    \"email\":\"john@gmail.com\",\r\n    \"password\":\"secret\"\r\n}",
+							"raw": "{\r\n    \"name\":\"sadmanuser\",\r\n    \"email\":\"sadmanuser@gmail.com\",\r\n    \"password\":\"secret\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -50,7 +50,12 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\":\"john\",\r\n    \"email\":\"john@gmail.com\",\r\n    \"password\":\"secret\"\r\n}"
+							"raw": "{\r\n    \r\n    \"email\":\"sadmanadmin@gmail.com\",\r\n    \"verificationToken\":\"065a1b445b28574c113813574630e6e5caaaecb85f8902b96ec5ac40527ecc62d5f47c5076863a5c\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
 							"raw": "{{URL}}/auth/verify-email",
@@ -130,7 +135,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\":\"sadman@gmail.com\",\r\n    \"password\":\"secret\"\r\n}",
+							"raw": "{\r\n    \"email\":\"sadmanuser@gmail.com\",\r\n    \"password\":\"secret\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
