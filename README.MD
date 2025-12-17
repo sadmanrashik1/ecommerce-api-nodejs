@@ -1,6 +1,3 @@
-
-  
-
 # E-Commerce Backend API (Node.js + Express + MongoDB)
 
   
@@ -131,8 +128,7 @@ Full-featured e-commerce backend API with user authentication, role-based access
 
 ## Models Schema
 
-**User**
-
+**User** 
 name, email (unique), password, role ('user'/'admin'), verificationToken, isVerified, verified, passwordToken, passwordTokenExpirationDate
 
   
@@ -147,11 +143,14 @@ name, price, description, image (default provided), category (office/kitchen/bed
 
 rating (1–5), title, comment, user (ref User), product (ref Product) – unique per user/product
 
+**SingleOrderItemSchema**
+name , image, price, amout, product (ref Product)
+  
   
 
 **Order**
 
-tax, shippingFee, subtotal, total, orderItems[], status, user (ref User), clientSecret, paymentIntentId
+tax, shippingFee, subtotal, total, orderItems[SingleOrderItemSchema], status, user (ref User), clientSecret, paymentIntentId
 
   
 
