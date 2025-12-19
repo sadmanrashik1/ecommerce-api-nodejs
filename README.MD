@@ -4,7 +4,7 @@
 
 **Repository**: [https://github.com/sadmanrashik1/ecommerce-api-nodejs](https://github.com/sadmanrashik1/ecommerce-api-nodejs)
 
-**Render Deploy**: [ecommerce-api-nodejs-2gmv.onrender.com](ecommerce-api-nodejs-2gmv.onrender.com)
+**Render Deploy**: [https://ecommerce-api-nodejs-2gmv.onrender.com](https://ecommerce-api-nodejs-2gmv.onrender.com)
 
 ## Testing API Using Bash Script (Reliable + Fastest)
 
