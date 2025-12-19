@@ -3,7 +3,35 @@
   
 
 **Repository**: [https://github.com/sadmanrashik1/ecommerce-api-nodejs](https://github.com/sadmanrashik1/ecommerce-api-nodejs)
-## Hybrid testing api (reliable+fastest)
+##  Testing api Using Bash Script(reliable+fastest)
+**Script**: `./autoTestsBash/test-api.sh`  
+**Purpose**: automated end-to-end testing of the E-Commerce API using **bash + curl + jq**.  
+**Runs on**: Linux, macOS, Windows (cygWin, WSL or Git Bash)
+
+This script demonstrates a complete test flow including:
+- Admin and regular user sessions
+- Public routes
+- Protected routes
+- Role-based access control (unauthorized attempts)
+- CRUD operations
+- Cleanup
+
+It uses cookie persistence (`cookies.txt`) to maintain sessions, just like a real browser.
+
+## Features
+- **Structured logging** with timestamps (12-hour format with AM/PM)
+- **Live terminal output** + full log saved to `outputLog.txt`
+- **Reusable wrapper function** (`api_request`) for clean, consistent calls
+- **Cookie handling** for authenticated routes
+- **Pretty JSON output** with `jq`
+- **Sleep delays** for readability
+
+## Requirements
+- `curl`
+- `jq` (for pretty JSON – install with `brew install jq` or `apt install jq`)
+- Bash shell
+
+##  Local Postman  Steps:
 - Local Postman Application + hosted onrender api
 	- import post man collection from root of repo
 	- set URL variable as : https://ecommerce-api-nodejs-2gmv.onrender.com/api/v1
@@ -21,7 +49,7 @@
 
 
 
-## Local Setup Steps
+## Local Server Setup Steps
 
 1. Clone repo
 

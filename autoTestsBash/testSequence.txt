@@ -1,0 +1,29 @@
+Test Sequence followed in Bash
+	1. Login as Admin (Start with admin to set up session – use sadmanadmin@gmail.com pass:secret
+	2. Get All Users (Admin only) (Verify admin can see all users)
+	3. Logout (cookies will be cleared)
+	4. Login normal User    sadmanuser@gmail.com pass:secret
+	5. Check getAllUsers with no user cookie : Unauthorized to access this route
+	6. Get All Products (Public) (No auth needed – test public route)
+	7. Get Single Product (Test product details)
+	8. Create Product (Admin only) : fails as user
+	9. Login admin
+	10. Create Product (Admin only) (Admin creates a product – note the ID from response for later tests)
+	11. Get Product Reviews (Check reviews for the product – should be empty at first)
+	12. Logout Admin
+	13. Login as Regular User (Switch to regular user session)
+	14. Show Current User (Regular) (Verify profile)
+	15. Create Review (Regular user) (Review the product created by admin)
+	16. Update Own Review
+	17. Get All Reviews
+	18. Create Order (Regular user) (Place an order with items)
+	19. Get Own Orders (showAllMyOrders)
+	20. Logout Regular User
+	21. Login as Admin again
+	22. Get All Orders (Admin only) (Verify admin can see the order)
+	23. Update Order Status (Admin only) (Change status of the order)
+	24. Delete Review (Regular user – login again if needed) (Cleanup – delete the review)
+	25. Delete Product (Admin only) (Cleanup – delete the test product):user cant
+	26. Log in admin and Delete Product (Admin only).
+	27. LogOut admin.
+

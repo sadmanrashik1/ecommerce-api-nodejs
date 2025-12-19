@@ -1,0 +1,1524 @@
+===============================
+STEP: Admin Login
+COMMAND: curl -s -X POST https://ecommerce-api-nodejs-2gmv.onrender.com/api/v1/auth/login
+BODY: {
+  "email": "sadmanadmin@gmail.com",
+  "password": "secret"
+}
+
+
+OUTPUT:
+{
+  "user": {
+    "name": "sadman",
+    "userId": "6940c9c723ef202a8e7e1242",
+    "role": "admin"
+  }
+}
+STEP: Admin Login - Finished at 2025-12-19 02:19:43 AM
+=====================================================
+
+
+===============================
+STEP: Get All Users
+COMMAND: curl -s -X GET https://ecommerce-api-nodejs-2gmv.onrender.com/api/v1/users
+OUTPUT:
+{
+  "users": [
+    {
+      "_id": "6940ca4723ef202a8e7e124a",
+      "name": "sadmanuser",
+      "email": "sadmanuser@gmail.com",
+      "role": "user",
+      "verificationToken": "",
+      "isVerified": true,
+      "__v": 0,
+      "verified": "2025-12-16T02:56:44.118Z"
+    },
+    {
+      "_id": "6944b224ccf0f88277abfe72",
+      "name": "sadman2",
+      "email": "sadman2@gmail.com",
+      "role": "user",
+      "verificationToken": "",
+      "isVerified": true,
+      "__v": 0,
+      "verified": "2025-12-19T02:02:59.835Z"
+    },
+    {
+      "_id": "6944b25eccf0f88277abfe78",
+      "name": "sadman3",
+      "email": "sadman3@gmail.com",
+      "role": "user",
+      "verificationToken": "",
+      "isVerified": true,
+      "__v": 0,
+      "verified": "2025-12-19T02:03:36.984Z"
+    }
+  ]
+}
+STEP: Get All Users - Finished at 2025-12-19 02:22:44 AM
+=====================================================
+
+
+===============================
+STEP: User Logout
+COMMAND: curl -s -X DELETE https://ecommerce-api-nodejs-2gmv.onrender.com/api/v1/auth/logout
+OUTPUT:
+{
+  "msg": "user logged out!"
+}
+STEP: User Logout - Finished at 2025-12-19 02:24:45 AM
+=====================================================
+
+
+===============================
+STEP: User Login
+COMMAND: curl -s -X POST https://ecommerce-api-nodejs-2gmv.onrender.com/api/v1/auth/login
+BODY: {
+  "email": "sadmanuser@gmail.com",
+  "password": "secret"
+}
+
+
+OUTPUT:
+{
+  "user": {
+    "name": "sadmanuser",
+    "userId": "6940ca4723ef202a8e7e124a",
+    "role": "user"
+  }
+}
+STEP: User Login - Finished at 2025-12-19 02:29:21 AM
+=====================================================
+
+
+===============================
+STEP: Get All Users (admin only)
+COMMAND: curl -s -X GET https://ecommerce-api-nodejs-2gmv.onrender.com/api/v1/users
+OUTPUT:
+{
+  "msg": "Unauthorized to access this route"
+}
+STEP: Get All Users (admin only) - Finished at 2025-12-19 02:31:30 AM
+=====================================================
+
+
+===============================
+STEP: Get All Products
+COMMAND: curl -s -X GET https://ecommerce-api-nodejs-2gmv.onrender.com/api/v1/products
+OUTPUT:
+{
+  "products": [
+    {
+      "_id": "69336c3e9b2af5d54e5235c9",
+      "name": "product 1 updated",
+      "price": 3000,
+      "description": "Cloud bread VHS hell of banjo bicycle rights jianbing umami mumblecore etsy 8-bit pok pok +1 wolf. Vexillologist yr dreamcatcher waistcoat, authentic chillwave trust fund. Viral typewriter fingerstache pinterest pork belly narwhal. Schlitz venmo everyday carry kitsch pitchfork chillwave iPhone taiyaki trust fund hashtag kinfolk microdosing gochujang live-edge",
+      "image": "/uploads/example.jpeg",
+      "category": "office",
+      "company": "marcos",
+      "colors": [
+        "#ff0000",
+        "#00ff00",
+        "#0000ff"
+      ],
+      "featured": false,
+      "freeShipping": false,
+      "inventory": 15,
+      "averageRating": 4,
+      "user": "692903d873c5ea6fcc091657",
+      "createdAt": "2025-12-05T23:35:26.317Z",
+      "updatedAt": "2025-12-17T19:56:38.336Z",
+      "__v": 0,
+      "numOfReviews": 3,
+      "id": "69336c3e9b2af5d54e5235c9"
+    },
+    {
+      "numOfReviews": 0,
+      "_id": "69389f902fa68d29032fcf41",
+      "name": "Product 2",
+      "price": 1020,
+      "description": "Cloud bread VHS hell of banjo bicycle rights jianbing umami mumblecore etsy 8-bit pok pok +1 wolf. Vexillologist yr dreamcatcher waistcoat, authentic chillwave trust fund. Viral typewriter fingerstache pinterest pork belly narwhal. Schlitz venmo everyday carry kitsch pitchfork chillwave iPhone taiyaki trust fund hashtag kinfolk microdosing gochujang live-edge",
+      "image": "/uploads/example.jpeg",
+      "category": "office",
+      "company": "marcos",
+      "colors": [
+        "#ff0000",
+        "#00ff00",
+        "#0000ff"
+      ],
+      "featured": false,
+      "freeShipping": false,
+      "inventory": 15,
+      "averageRating": 0,
+      "user": "692903d873c5ea6fcc091657",
+      "createdAt": "2025-12-09T22:15:44.549Z",
+      "updatedAt": "2025-12-09T22:15:44.549Z",
+      "__v": 0,
+      "id": "69389f902fa68d29032fcf41"
+    },
+    {
+      "numOfReviews": 0,
+      "_id": "69389f9a2fa68d29032fcf43",
+      "name": "Product 3",
+      "price": 1040,
+      "description": "Cloud bread VHS hell of banjo bicycle rights jianbing umami mumblecore etsy 8-bit pok pok +1 wolf. Vexillologist yr dreamcatcher waistcoat, authentic chillwave trust fund. Viral typewriter fingerstache pinterest pork belly narwhal. Schlitz venmo everyday carry kitsch pitchfork chillwave iPhone taiyaki trust fund hashtag kinfolk microdosing gochujang live-edge",
+      "image": "/uploads/example.jpeg",
+      "category": "office",
+      "company": "marcos",
+      "colors": [
+        "#ff0000",
+        "#00ff00",
+        "#0000ff"
+      ],
+      "featured": false,
+      "freeShipping": false,
+      "inventory": 15,
+      "averageRating": 0,
+      "user": "692903d873c5ea6fcc091657",
+      "createdAt": "2025-12-09T22:15:54.703Z",
+      "updatedAt": "2025-12-09T22:15:54.703Z",
+      "__v": 0,
+      "id": "69389f9a2fa68d29032fcf43"
+    },
+    {
+      "_id": "69436c8d4b2d5e0ffa224980",
+      "name": "Modern Accent Chair",
+      "price": 2599,
+      "description": "Stylish and comfortable accent chair",
+      "image": "/uploads/example.jpeg",
+      "category": "office",
+      "company": "ikea",
+      "colors": [
+        "#223344",
+        "#ff9900"
+      ],
+      "featured": true,
+      "freeShipping": false,
+      "inventory": 15,
+      "averageRating": 0,
+      "numOfReviews": 0,
+      "user": "6940c9c723ef202a8e7e1242",
+      "createdAt": "2025-12-18T02:53:01.513Z",
+      "updatedAt": "2025-12-18T02:53:01.513Z",
+      "__v": 0,
+      "id": "69436c8d4b2d5e0ffa224980"
+    }
+  ],
+  "count": 4
+}
+STEP: Get All Products - Finished at 2025-12-19 02:33:17 AM
+=====================================================
+
+
+===============================
+STEP: Get Single Product
+COMMAND: curl -s -X GET https://ecommerce-api-nodejs-2gmv.onrender.com/api/v1/products/69436c8d4b2d5e0ffa224980
+OUTPUT:
+{
+  "product": {
+    "_id": "69436c8d4b2d5e0ffa224980",
+    "name": "Modern Accent Chair",
+    "price": 2599,
+    "description": "Stylish and comfortable accent chair",
+    "image": "/uploads/example.jpeg",
+    "category": "office",
+    "company": "ikea",
+    "colors": [
+      "#223344",
+      "#ff9900"
+    ],
+    "featured": true,
+    "freeShipping": false,
+    "inventory": 15,
+    "averageRating": 0,
+    "numOfReviews": 0,
+    "user": "6940c9c723ef202a8e7e1242",
+    "createdAt": "2025-12-18T02:53:01.513Z",
+    "updatedAt": "2025-12-18T02:53:01.513Z",
+    "__v": 0,
+    "reviews": [],
+    "id": "69436c8d4b2d5e0ffa224980"
+  }
+}
+STEP: Get Single Product - Finished at 2025-12-19 02:34:53 AM
+=====================================================
+
+
+===============================
+STEP: Create New Product
+COMMAND: curl -s -X POST https://ecommerce-api-nodejs-2gmv.onrender.com/api/v1/products
+BODY: {
+  "name": "Ergonomic Office Chair",
+  "price": 18999,
+  "description": "Premium ergonomic office chair with lumbar support, adjustable height and 360-degree swivel",
+  "category": "office",
+  "company": "ikea",
+  "colors": ["#000000", "#808080", "#003366"],
+  "featured": true,
+  "freeShipping": false,
+  "inventory": 25
+}
+
+
+OUTPUT:
+{
+  "msg": "Unauthorized to access this route"
+}
+STEP: Create New Product - Finished at 2025-12-19 02:39:09 AM
+=====================================================
+
+
+===============================
+STEP: Admin Login
+COMMAND: curl -s -X POST https://ecommerce-api-nodejs-2gmv.onrender.com/api/v1/auth/login
+BODY: {
+  "email": "sadmanadmin@gmail.com",
+  "password": "secret"
+}
+
+
+OUTPUT:
+{
+  "user": {
+    "name": "sadman",
+    "userId": "6940c9c723ef202a8e7e1242",
+    "role": "admin"
+  }
+}
+STEP: Admin Login - Finished at 2025-12-19 02:40:04 AM
+=====================================================
+
+
+===============================
+STEP: Create New Product
+COMMAND: curl -s -X POST https://ecommerce-api-nodejs-2gmv.onrender.com/api/v1/products
+BODY: {
+  "name": "Ergonomic Office Chair",
+  "price": 18999,
+  "description": "Premium ergonomic office chair with lumbar support, adjustable height and 360-degree swivel",
+  "category": "office",
+  "company": "ikea",
+  "colors": ["#000000", "#808080", "#003366"],
+  "featured": true,
+  "freeShipping": false,
+  "inventory": 25
+}
+
+
+OUTPUT:
+{
+  "product": {
+    "name": "Ergonomic Office Chair",
+    "price": 18999,
+    "description": "Premium ergonomic office chair with lumbar support, adjustable height and 360-degree swivel",
+    "image": "/uploads/example.jpeg",
+    "category": "office",
+    "company": "ikea",
+    "colors": [
+      "#000000",
+      "#808080",
+      "#003366"
+    ],
+    "featured": true,
+    "freeShipping": false,
+    "inventory": 25,
+    "averageRating": 0,
+    "numOfReviews": 0,
+    "user": "6940c9c723ef202a8e7e1242",
+    "_id": "6944bb1b2f5ae32b85764a4e",
+    "createdAt": "2025-12-19T02:40:27.666Z",
+    "updatedAt": "2025-12-19T02:40:27.666Z",
+    "__v": 0,
+    "id": "6944bb1b2f5ae32b85764a4e"
+  }
+}
+STEP: Create New Product - Finished at 2025-12-19 02:40:28 AM
+=====================================================
+
+
+===============================
+STEP: Get Product Reviews
+COMMAND: curl -s -X GET https://ecommerce-api-nodejs-2gmv.onrender.com/api/v1/products/6944bb1b2f5ae32b85764a4e/reviews
+OUTPUT:
+{
+  "reviews": [],
+  "count": 0
+}
+STEP: Get Product Reviews - Finished at 2025-12-19 02:43:09 AM
+=====================================================
+
+
+===============================
+STEP: User Logout
+COMMAND: curl -s -X DELETE https://ecommerce-api-nodejs-2gmv.onrender.com/api/v1/auth/logout
+OUTPUT:
+{
+  "msg": "user logged out!"
+}
+STEP: User Logout - Finished at 2025-12-19 02:43:46 AM
+=====================================================
+
+
+===============================
+STEP: User Login
+COMMAND: curl -s -X POST https://ecommerce-api-nodejs-2gmv.onrender.com/api/v1/auth/login
+BODY: {
+  "email": "sadmanuser@gmail.com",
+  "password": "secret"
+}
+
+
+OUTPUT:
+{
+  "user": {
+    "name": "sadmanuser",
+    "userId": "6940ca4723ef202a8e7e124a",
+    "role": "user"
+  }
+}
+STEP: User Login - Finished at 2025-12-19 02:44:22 AM
+=====================================================
+
+
+===============================
+STEP: Show Current User
+COMMAND: curl -s -X GET https://ecommerce-api-nodejs-2gmv.onrender.com/api/v1/users/showMe
+OUTPUT:
+{
+  "user": {
+    "name": "sadmanuser",
+    "userId": "6940ca4723ef202a8e7e124a",
+    "role": "user"
+  }
+}
+STEP: Show Current User - Finished at 2025-12-19 02:45:59 AM
+=====================================================
+
+
+===============================
+STEP: Create Review for Product 6944bb1b2f5ae32b85764a4e
+COMMAND: curl -s -X POST https://ecommerce-api-nodejs-2gmv.onrender.com/api/v1/reviews
+BODY: {
+  "product": "6944bb1b2f5ae32b85764a4e",
+  "rating": 5,
+  "title": "Excellent Quality!",
+  "comment": "This product exceeded my expectations. Very comfortable and durable."
+}
+
+
+OUTPUT:
+{
+  "review": {
+    "rating": 5,
+    "title": "Excellent Quality!",
+    "comment": "This product exceeded my expectations. Very comfortable and durable.",
+    "user": "6940ca4723ef202a8e7e124a",
+    "product": "6944bb1b2f5ae32b85764a4e",
+    "_id": "6944bcab2f5ae32b85764a56",
+    "createdAt": "2025-12-19T02:47:07.619Z",
+    "updatedAt": "2025-12-19T02:47:07.619Z",
+    "__v": 0
+  }
+}
+STEP: Create Review for Product 6944bb1b2f5ae32b85764a4e - Finished at 2025-12-19 02:47:08 AM
+=====================================================
+
+
+
+===============================
+STEP: Update Review
+COMMAND: curl -s -X PATCH https://ecommerce-api-nodejs-2gmv.onrender.com/api/v1/reviews/6944bcab2f5ae32b85764a56
+BODY: {
+  "rating": 4,
+  "title": "Updated Review Title",
+  "comment": "Updated review comment after using product for a while."
+}
+
+
+OUTPUT:
+{
+  "review": {
+    "_id": "6944bcab2f5ae32b85764a56",
+    "rating": 4,
+    "title": "Updated Review Title",
+    "comment": "Updated review comment after using product for a while.",
+    "user": "6940ca4723ef202a8e7e124a",
+    "product": "6944bb1b2f5ae32b85764a4e",
+    "createdAt": "2025-12-19T02:47:07.619Z",
+    "updatedAt": "2025-12-19T02:51:43.485Z",
+    "__v": 0
+  }
+}
+STEP: Update Review - Finished at 2025-12-19 02:52:33 AM
+=====================================================
+
+
+===============================
+STEP: Get All Reviews
+COMMAND: curl -s -X GET https://ecommerce-api-nodejs-2gmv.onrender.com/api/v1/reviews
+OUTPUT:
+{
+  "reviews": [
+    {
+      "_id": "69336c589b2af5d54e5235ce",
+      "rating": 4,
+      "title": "very bad product",
+      "comment": "very very bad product by admin",
+      "user": "692903d873c5ea6fcc091657",
+      "product": {
+        "_id": "69336c3e9b2af5d54e5235c9",
+        "name": "product 1 updated",
+        "price": 3000,
+        "company": "marcos",
+        "id": "69336c3e9b2af5d54e5235c9"
+      },
+      "createdAt": "2025-12-05T23:35:52.918Z",
+      "updatedAt": "2025-12-17T19:56:38.180Z",
+      "__v": 0
+    },
+    {
+      "_id": "69336c6a9b2af5d54e5235d3",
+      "rating": 5,
+      "title": "good product",
+      "comment": " good product",
+      "user": "692920a26005002d5c0871f0",
+      "product": {
+        "_id": "69336c3e9b2af5d54e5235c9",
+        "name": "product 1 updated",
+        "price": 3000,
+        "company": "marcos",
+        "id": "69336c3e9b2af5d54e5235c9"
+      },
+      "createdAt": "2025-12-05T23:36:10.928Z",
+      "updatedAt": "2025-12-05T23:36:10.928Z",
+      "__v": 0
+    },
+    {
+      "_id": "6940d8536a45d52c556bcb47",
+      "rating": 1,
+      "title": "very bad product",
+      "comment": "very very bad product by admin",
+      "user": "6940ca4723ef202a8e7e124a",
+      "product": {
+        "_id": "69336c3e9b2af5d54e5235c9",
+        "name": "product 1 updated",
+        "price": 3000,
+        "company": "marcos",
+        "id": "69336c3e9b2af5d54e5235c9"
+      },
+      "createdAt": "2025-12-16T03:56:03.564Z",
+      "updatedAt": "2025-12-16T03:57:38.574Z",
+      "__v": 0
+    },
+    {
+      "_id": "6944bcab2f5ae32b85764a56",
+      "rating": 4,
+      "title": "Updated Review Title",
+      "comment": "Updated review comment after using product for a while.",
+      "user": "6940ca4723ef202a8e7e124a",
+      "product": {
+        "_id": "6944bb1b2f5ae32b85764a4e",
+        "name": "Ergonomic Office Chair",
+        "price": 18999,
+        "company": "ikea",
+        "id": "6944bb1b2f5ae32b85764a4e"
+      },
+      "createdAt": "2025-12-19T02:47:07.619Z",
+      "updatedAt": "2025-12-19T02:51:43.485Z",
+      "__v": 0
+    }
+  ],
+  "count": 4
+}
+STEP: Get All Reviews - Finished at 2025-12-19 02:52:49 AM
+=====================================================
+
+
+===============================
+STEP: Create Order with Multiple Products
+COMMAND: curl -s -X POST https://ecommerce-api-nodejs-2gmv.onrender.com/api/v1/orders
+BODY: {
+  "tax": 250,
+  "shippingFee": 500,
+  "items": [
+    {
+      "name": "Ergonomic Office Chair",
+      "price": 18999,
+      "image": "/uploads/example.jpeg",
+      "amount": 1,
+      "product": "6944bb1b2f5ae32b85764a4e"
+    },
+    {
+      "name": "Modern Accent Chair",
+      "price": 2599,
+      "image": "/uploads/example.jpeg",
+      "amount": 2,
+      "product": "69436c8d4b2d5e0ffa224980"
+    },
+    {
+      "name": "product 1 updated",
+      "price": 3000,
+      "image": "/uploads/example.jpeg",
+      "amount": 3,
+      "product": "69336c3e9b2af5d54e5235c9"
+    }
+  ]
+}
+
+
+OUTPUT:
+{
+  "order": {
+    "tax": 250,
+    "shippingFee": 500,
+    "subtotal": 33197,
+    "total": 33947,
+    "orderItems": [
+      {
+        "name": "Ergonomic Office Chair",
+        "image": "/uploads/example.jpeg",
+        "price": 18999,
+        "amount": 1,
+        "product": "6944bb1b2f5ae32b85764a4e",
+        "_id": "6944bf122f5ae32b85764a69"
+      },
+      {
+        "name": "Modern Accent Chair",
+        "image": "/uploads/example.jpeg",
+        "price": 2599,
+        "amount": 2,
+        "product": "69436c8d4b2d5e0ffa224980",
+        "_id": "6944bf122f5ae32b85764a6a"
+      },
+      {
+        "name": "product 1 updated",
+        "image": "/uploads/example.jpeg",
+        "price": 3000,
+        "amount": 3,
+        "product": "69336c3e9b2af5d54e5235c9",
+        "_id": "6944bf122f5ae32b85764a6b"
+      }
+    ],
+    "status": "pending",
+    "user": "6940ca4723ef202a8e7e124a",
+    "clientSecret": "someRandomValue",
+    "_id": "6944bf122f5ae32b85764a68",
+    "createdAt": "2025-12-19T02:57:22.702Z",
+    "updatedAt": "2025-12-19T02:57:22.702Z",
+    "__v": 0
+  },
+  "clientSecret": "someRandomValue"
+}
+STEP: Create Order with Multiple Products - Finished at 2025-12-19 02:57:23 AM
+=====================================================
+
+
+===============================
+STEP: Get My Orders
+COMMAND: curl -s -X GET https://ecommerce-api-nodejs-2gmv.onrender.com/api/v1/orders/showAllMyOrders
+OUTPUT:
+{
+  "orders": [
+    {
+      "_id": "6942178a980fa7a7cfee4d9a",
+      "tax": 499,
+      "shippingFee": 799,
+      "subtotal": 80037,
+      "total": 81335,
+      "orderItems": [
+        {
+          "name": "product 1",
+          "image": "/uploads/example.jpeg",
+          "price": 25999,
+          "amount": 3,
+          "product": "69336c3e9b2af5d54e5235c9",
+          "_id": "6942178a980fa7a7cfee4d9b"
+        },
+        {
+          "name": "Product 2",
+          "image": "/uploads/example.jpeg",
+          "price": 1020,
+          "amount": 2,
+          "product": "69389f902fa68d29032fcf41",
+          "_id": "6942178a980fa7a7cfee4d9c"
+        }
+      ],
+      "status": "pending",
+      "user": "6940ca4723ef202a8e7e124a",
+      "clientSecret": "someRandomValue",
+      "createdAt": "2025-12-17T02:38:02.544Z",
+      "updatedAt": "2025-12-17T02:38:02.544Z",
+      "__v": 0
+    },
+    {
+      "_id": "6944bf122f5ae32b85764a68",
+      "tax": 250,
+      "shippingFee": 500,
+      "subtotal": 33197,
+      "total": 33947,
+      "orderItems": [
+        {
+          "name": "Ergonomic Office Chair",
+          "image": "/uploads/example.jpeg",
+          "price": 18999,
+          "amount": 1,
+          "product": "6944bb1b2f5ae32b85764a4e",
+          "_id": "6944bf122f5ae32b85764a69"
+        },
+        {
+          "name": "Modern Accent Chair",
+          "image": "/uploads/example.jpeg",
+          "price": 2599,
+          "amount": 2,
+          "product": "69436c8d4b2d5e0ffa224980",
+          "_id": "6944bf122f5ae32b85764a6a"
+        },
+        {
+          "name": "product 1 updated",
+          "image": "/uploads/example.jpeg",
+          "price": 3000,
+          "amount": 3,
+          "product": "69336c3e9b2af5d54e5235c9",
+          "_id": "6944bf122f5ae32b85764a6b"
+        }
+      ],
+      "status": "pending",
+      "user": "6940ca4723ef202a8e7e124a",
+      "clientSecret": "someRandomValue",
+      "createdAt": "2025-12-19T02:57:22.702Z",
+      "updatedAt": "2025-12-19T02:57:22.702Z",
+      "__v": 0
+    }
+  ],
+  "count": 2
+}
+STEP: Get My Orders - Finished at 2025-12-19 02:58:10 AM
+=====================================================
+
+
+===============================
+STEP: User Logout
+COMMAND: curl -s -X DELETE https://ecommerce-api-nodejs-2gmv.onrender.com/api/v1/auth/logout
+OUTPUT:
+{
+  "msg": "user logged out!"
+}
+STEP: User Logout - Finished at 2025-12-19 02:59:35 AM
+=====================================================
+
+
+===============================
+STEP: Admin Login
+COMMAND: curl -s -X POST https://ecommerce-api-nodejs-2gmv.onrender.com/api/v1/auth/login
+BODY: {
+        "email": "sadmanadmin@gmail.com",
+        "password": "secret"
+    }
+
+
+OUTPUT:
+{
+  "user": {
+    "name": "sadman",
+    "userId": "6940c9c723ef202a8e7e1242",
+    "role": "admin"
+  }
+}
+STEP: Admin Login - Finished at 2025-12-19 03:00:02 AM
+=====================================================
+
+
+===============================
+STEP: Get All Orders (Admin)
+COMMAND: curl -s -X GET https://ecommerce-api-nodejs-2gmv.onrender.com/api/v1/orders
+OUTPUT:
+{
+  "orders": [
+    {
+      "_id": "693b699c55f62bff4816a3a1",
+      "tax": 399,
+      "shippingFee": 499,
+      "subtotal": 51998,
+      "total": 52896,
+      "orderItems": [
+        {
+          "name": "Product 1",
+          "image": "/uploads/example.jpeg",
+          "price": 25999,
+          "amount": 2,
+          "product": "69336c3e9b2af5d54e5235c9",
+          "_id": "693b699c55f62bff4816a3a2"
+        }
+      ],
+      "status": "pending",
+      "user": "692920a26005002d5c0871f0",
+      "clientSecret": "someRandomValue",
+      "createdAt": "2025-12-12T01:02:20.537Z",
+      "updatedAt": "2025-12-12T01:02:20.537Z",
+      "__v": 0
+    },
+    {
+      "_id": "693b6a7055f62bff4816a3a7",
+      "tax": 499,
+      "shippingFee": 799,
+      "subtotal": 80037,
+      "total": 81335,
+      "orderItems": [
+        {
+          "name": "Product 1",
+          "image": "/uploads/example.jpeg",
+          "price": 25999,
+          "amount": 3,
+          "product": "69336c3e9b2af5d54e5235c9",
+          "_id": "693b6a7055f62bff4816a3a8"
+        },
+        {
+          "name": "Product 2",
+          "image": "/uploads/example.jpeg",
+          "price": 1020,
+          "amount": 2,
+          "product": "69389f902fa68d29032fcf41",
+          "_id": "693b6a7055f62bff4816a3a9"
+        }
+      ],
+      "status": "pending",
+      "user": "692920a26005002d5c0871f0",
+      "clientSecret": "someRandomValue",
+      "createdAt": "2025-12-12T01:05:52.627Z",
+      "updatedAt": "2025-12-12T01:05:52.627Z",
+      "__v": 0
+    },
+    {
+      "_id": "693bc00364d80a27135a695b",
+      "tax": 499,
+      "shippingFee": 799,
+      "subtotal": 80037,
+      "total": 81335,
+      "orderItems": [
+        {
+          "name": "Product 1",
+          "image": "/uploads/example.jpeg",
+          "price": 25999,
+          "amount": 3,
+          "product": "69336c3e9b2af5d54e5235c9",
+          "_id": "693bc00364d80a27135a695c"
+        },
+        {
+          "name": "Product 2",
+          "image": "/uploads/example.jpeg",
+          "price": 1020,
+          "amount": 2,
+          "product": "69389f902fa68d29032fcf41",
+          "_id": "693bc00364d80a27135a695d"
+        }
+      ],
+      "status": "pending",
+      "user": "692920a26005002d5c0871f0",
+      "clientSecret": "someRandomValue",
+      "createdAt": "2025-12-12T07:10:59.394Z",
+      "updatedAt": "2025-12-12T07:10:59.394Z",
+      "__v": 0
+    },
+    {
+      "_id": "693bcbc9dce8a4f25e1dc654",
+      "tax": 499,
+      "shippingFee": 799,
+      "subtotal": 80037,
+      "total": 81335,
+      "orderItems": [
+        {
+          "name": "Product 1",
+          "image": "/uploads/example.jpeg",
+          "price": 25999,
+          "amount": 3,
+          "product": "69336c3e9b2af5d54e5235c9",
+          "_id": "693bcbc9dce8a4f25e1dc655"
+        },
+        {
+          "name": "Product 2",
+          "image": "/uploads/example.jpeg",
+          "price": 1020,
+          "amount": 2,
+          "product": "69389f902fa68d29032fcf41",
+          "_id": "693bcbc9dce8a4f25e1dc656"
+        }
+      ],
+      "status": "paid",
+      "user": "692920a26005002d5c0871f0",
+      "clientSecret": "someRandomValue",
+      "createdAt": "2025-12-12T08:01:13.571Z",
+      "updatedAt": "2025-12-12T08:06:38.948Z",
+      "__v": 0,
+      "paymentIntentId": "someRandomId"
+    },
+    {
+      "_id": "6942178a980fa7a7cfee4d9a",
+      "tax": 499,
+      "shippingFee": 799,
+      "subtotal": 80037,
+      "total": 81335,
+      "orderItems": [
+        {
+          "name": "product 1",
+          "image": "/uploads/example.jpeg",
+          "price": 25999,
+          "amount": 3,
+          "product": "69336c3e9b2af5d54e5235c9",
+          "_id": "6942178a980fa7a7cfee4d9b"
+        },
+        {
+          "name": "Product 2",
+          "image": "/uploads/example.jpeg",
+          "price": 1020,
+          "amount": 2,
+          "product": "69389f902fa68d29032fcf41",
+          "_id": "6942178a980fa7a7cfee4d9c"
+        }
+      ],
+      "status": "pending",
+      "user": "6940ca4723ef202a8e7e124a",
+      "clientSecret": "someRandomValue",
+      "createdAt": "2025-12-17T02:38:02.544Z",
+      "updatedAt": "2025-12-17T02:38:02.544Z",
+      "__v": 0
+    },
+    {
+      "_id": "6943852cccf0f88277abfe60",
+      "tax": 499,
+      "shippingFee": 799,
+      "subtotal": 11040,
+      "total": 12338,
+      "orderItems": [
+        {
+          "name": "product 1 updated",
+          "image": "/uploads/example.jpeg",
+          "price": 3000,
+          "amount": 3,
+          "product": "69336c3e9b2af5d54e5235c9",
+          "_id": "6943852cccf0f88277abfe61"
+        },
+        {
+          "name": "Product 2",
+          "image": "/uploads/example.jpeg",
+          "price": 1020,
+          "amount": 2,
+          "product": "69389f902fa68d29032fcf41",
+          "_id": "6943852cccf0f88277abfe62"
+        }
+      ],
+      "status": "pending",
+      "user": "6940c9c723ef202a8e7e1242",
+      "clientSecret": "someRandomValue",
+      "createdAt": "2025-12-18T04:38:04.930Z",
+      "updatedAt": "2025-12-18T04:38:04.930Z",
+      "__v": 0
+    },
+    {
+      "_id": "694385dfccf0f88277abfe66",
+      "tax": 499,
+      "shippingFee": 799,
+      "subtotal": 11040,
+      "total": 12338,
+      "orderItems": [
+        {
+          "name": "product 1 updated",
+          "image": "/uploads/example.jpeg",
+          "price": 3000,
+          "amount": 3,
+          "product": "69336c3e9b2af5d54e5235c9",
+          "_id": "694385dfccf0f88277abfe67"
+        },
+        {
+          "name": "Product 2",
+          "image": "/uploads/example.jpeg",
+          "price": 1020,
+          "amount": 2,
+          "product": "69389f902fa68d29032fcf41",
+          "_id": "694385dfccf0f88277abfe68"
+        }
+      ],
+      "status": "pending",
+      "user": "6940c9c723ef202a8e7e1242",
+      "clientSecret": "someRandomValue",
+      "createdAt": "2025-12-18T04:41:03.074Z",
+      "updatedAt": "2025-12-18T04:41:03.074Z",
+      "__v": 0
+    },
+    {
+      "_id": "69438747ccf0f88277abfe6c",
+      "tax": 499,
+      "shippingFee": 799,
+      "subtotal": 11040,
+      "total": 12338,
+      "orderItems": [
+        {
+          "name": "product 1 updated",
+          "image": "/uploads/example.jpeg",
+          "price": 3000,
+          "amount": 3,
+          "product": "69336c3e9b2af5d54e5235c9",
+          "_id": "69438747ccf0f88277abfe6d"
+        },
+        {
+          "name": "Product 2",
+          "image": "/uploads/example.jpeg",
+          "price": 1020,
+          "amount": 2,
+          "product": "69389f902fa68d29032fcf41",
+          "_id": "69438747ccf0f88277abfe6e"
+        }
+      ],
+      "status": "pending",
+      "user": "6940c9c723ef202a8e7e1242",
+      "clientSecret": "someRandomValue",
+      "createdAt": "2025-12-18T04:47:03.529Z",
+      "updatedAt": "2025-12-18T04:47:03.529Z",
+      "__v": 0
+    },
+    {
+      "_id": "6944bf122f5ae32b85764a68",
+      "tax": 250,
+      "shippingFee": 500,
+      "subtotal": 33197,
+      "total": 33947,
+      "orderItems": [
+        {
+          "name": "Ergonomic Office Chair",
+          "image": "/uploads/example.jpeg",
+          "price": 18999,
+          "amount": 1,
+          "product": "6944bb1b2f5ae32b85764a4e",
+          "_id": "6944bf122f5ae32b85764a69"
+        },
+        {
+          "name": "Modern Accent Chair",
+          "image": "/uploads/example.jpeg",
+          "price": 2599,
+          "amount": 2,
+          "product": "69436c8d4b2d5e0ffa224980",
+          "_id": "6944bf122f5ae32b85764a6a"
+        },
+        {
+          "name": "product 1 updated",
+          "image": "/uploads/example.jpeg",
+          "price": 3000,
+          "amount": 3,
+          "product": "69336c3e9b2af5d54e5235c9",
+          "_id": "6944bf122f5ae32b85764a6b"
+        }
+      ],
+      "status": "pending",
+      "user": "6940ca4723ef202a8e7e124a",
+      "clientSecret": "someRandomValue",
+      "createdAt": "2025-12-19T02:57:22.702Z",
+      "updatedAt": "2025-12-19T02:57:22.702Z",
+      "__v": 0
+    }
+  ],
+  "count": 9
+}
+STEP: Get All Orders (Admin) - Finished at 2025-12-19 03:00:38 AM
+=====================================================
+
+
+===============================
+STEP: Update Order 693b699c55f62bff4816a3a1 to Paid
+COMMAND: curl -s -X PATCH https://ecommerce-api-nodejs-2gmv.onrender.com/api/v1/orders/693b699c55f62bff4816a3a1
+
+
+
+OUTPUT:
+{
+  "order": {
+    "_id": "693b699c55f62bff4816a3a1",
+    "tax": 399,
+    "shippingFee": 499,
+    "subtotal": 51998,
+    "total": 52896,
+    "orderItems": [
+      {
+        "name": "Product 1",
+        "image": "/uploads/example.jpeg",
+        "price": 25999,
+        "amount": 2,
+        "product": "69336c3e9b2af5d54e5235c9",
+        "_id": "693b699c55f62bff4816a3a2"
+      }
+    ],
+    "status": "paid",
+    "user": "692920a26005002d5c0871f0",
+    "clientSecret": "someRandomValue",
+    "createdAt": "2025-12-12T01:02:20.537Z",
+    "updatedAt": "2025-12-19T03:02:57.490Z",
+    "__v": 0
+  }
+}
+STEP: Update Order 693b699c55f62bff4816a3a1 to Paid - Finished at 2025-12-19 03:02:57 AM
+=====================================================
+
+
+===============================
+STEP: Update Order 6942178a980fa7a7cfee4d9a to Paid
+COMMAND: curl -s -X PATCH https://ecommerce-api-nodejs-2gmv.onrender.com/api/v1/orders/6942178a980fa7a7cfee4d9a
+OUTPUT:
+{
+  "order": {
+    "_id": "6942178a980fa7a7cfee4d9a",
+    "tax": 499,
+    "shippingFee": 799,
+    "subtotal": 80037,
+    "total": 81335,
+    "orderItems": [
+      {
+        "name": "product 1",
+        "image": "/uploads/example.jpeg",
+        "price": 25999,
+        "amount": 3,
+        "product": "69336c3e9b2af5d54e5235c9",
+        "_id": "6942178a980fa7a7cfee4d9b"
+      },
+      {
+        "name": "Product 2",
+        "image": "/uploads/example.jpeg",
+        "price": 1020,
+        "amount": 2,
+        "product": "69389f902fa68d29032fcf41",
+        "_id": "6942178a980fa7a7cfee4d9c"
+      }
+    ],
+    "status": "paid",
+    "user": "6940ca4723ef202a8e7e124a",
+    "clientSecret": "someRandomValue",
+    "createdAt": "2025-12-17T02:38:02.544Z",
+    "updatedAt": "2025-12-19T03:06:31.206Z",
+    "__v": 0
+  }
+}
+STEP: Update Order 6942178a980fa7a7cfee4d9a to Paid - Finished at 2025-12-19 03:06:31 AM
+=====================================================
+
+
+===============================
+STEP: Admin Logout
+COMMAND: curl -s -X DELETE https://ecommerce-api-nodejs-2gmv.onrender.com/api/v1/auth/logout
+OUTPUT:
+{
+  "msg": "user logged out!"
+}
+STEP: Admin Logout - Finished at 2025-12-19 03:07:45 AM
+=====================================================
+
+
+===============================
+STEP: Regular User Login
+COMMAND: curl -s -X POST https://ecommerce-api-nodejs-2gmv.onrender.com/api/v1/auth/login
+BODY: {
+        "email": "sadmanuser@gmail.com",
+        "password": "secret"
+    }
+
+
+OUTPUT:
+{
+  "user": {
+    "name": "sadmanuser",
+    "userId": "6940ca4723ef202a8e7e124a",
+    "role": "user"
+  }
+}
+STEP: Regular User Login - Finished at 2025-12-19 03:08:45 AM
+=====================================================
+
+
+===============================
+STEP: Delete My Review
+COMMAND: curl -s -X DELETE https://ecommerce-api-nodejs-2gmv.onrender.com/api/v1/reviews/6944bcab2f5ae32b85764a56
+OUTPUT:
+{
+  "msg": "Success! Review removed"
+}
+STEP: Delete My Review - Finished at 2025-12-19 03:10:18 AM
+=====================================================
+
+
+===============================
+STEP: Delete Product
+COMMAND: curl -s -X DELETE https://ecommerce-api-nodejs-2gmv.onrender.com/api/v1/products/69389f9a2fa68d29032fcf43
+OUTPUT:
+{
+  "msg": "Unauthorized to access this route"
+}
+STEP: Delete Product - Finished at 2025-12-19 03:12:00 AM
+=====================================================
+
+
+===============================
+STEP: Admin Login
+COMMAND: curl -s -X POST https://ecommerce-api-nodejs-2gmv.onrender.com/api/v1/auth/login
+BODY: {
+        "email": "sadmanadmin@gmail.com",
+        "password": "secret"
+    }
+
+
+OUTPUT:
+{
+  "user": {
+    "name": "sadman",
+    "userId": "6940c9c723ef202a8e7e1242",
+    "role": "admin"
+  }
+}
+STEP: Admin Login - Finished at 2025-12-19 03:13:15 AM
+=====================================================
+
+
+===============================
+STEP: Delete Product
+COMMAND: curl -s -X DELETE https://ecommerce-api-nodejs-2gmv.onrender.com/api/v1/products/69389f9a2fa68d29032fcf43
+OUTPUT:
+{
+  "msg": "Success! Product removed."
+}
+STEP: Delete Product - Finished at 2025-12-19 03:13:34 AM
+=====================================================
+
+
+===============================
+STEP: Admin Logout
+COMMAND: curl -s -X DELETE https://ecommerce-api-nodejs-2gmv.onrender.com/api/v1/auth/logout
+OUTPUT:
+{
+  "msg": "user logged out!"
+}
+STEP: Admin Logout - Finished at 2025-12-19 03:14:47 AM
+=====================================================
+
+
+===============================
+STEP: Admin Login
+COMMAND: curl -s -X POST https://ecommerce-api-nodejs-2gmv.onrender.com/api/v1/auth/login
+BODY: {
+        "email": "sadmanadmin@gmail.com",
+        "password": "secret"
+    }
+
+
+OUTPUT:
+{
+  "user": {
+    "name": "sadman",
+    "userId": "6940c9c723ef202a8e7e1242",
+    "role": "admin"
+  }
+}
+STEP: Admin Login - Finished at 2025-12-19 03:21:57 AM
+=====================================================
+
+
+===============================
+STEP: Get All Orders (Admin)
+COMMAND: curl -s -X GET https://ecommerce-api-nodejs-2gmv.onrender.com/api/v1/orders
+OUTPUT:
+{
+  "orders": [
+    {
+      "_id": "693b699c55f62bff4816a3a1",
+      "tax": 399,
+      "shippingFee": 499,
+      "subtotal": 51998,
+      "total": 52896,
+      "orderItems": [
+        {
+          "name": "Product 1",
+          "image": "/uploads/example.jpeg",
+          "price": 25999,
+          "amount": 2,
+          "product": "69336c3e9b2af5d54e5235c9",
+          "_id": "693b699c55f62bff4816a3a2"
+        }
+      ],
+      "status": "paid",
+      "user": "692920a26005002d5c0871f0",
+      "clientSecret": "someRandomValue",
+      "createdAt": "2025-12-12T01:02:20.537Z",
+      "updatedAt": "2025-12-19T03:02:57.490Z",
+      "__v": 0
+    },
+    {
+      "_id": "693b6a7055f62bff4816a3a7",
+      "tax": 499,
+      "shippingFee": 799,
+      "subtotal": 80037,
+      "total": 81335,
+      "orderItems": [
+        {
+          "name": "Product 1",
+          "image": "/uploads/example.jpeg",
+          "price": 25999,
+          "amount": 3,
+          "product": "69336c3e9b2af5d54e5235c9",
+          "_id": "693b6a7055f62bff4816a3a8"
+        },
+        {
+          "name": "Product 2",
+          "image": "/uploads/example.jpeg",
+          "price": 1020,
+          "amount": 2,
+          "product": "69389f902fa68d29032fcf41",
+          "_id": "693b6a7055f62bff4816a3a9"
+        }
+      ],
+      "status": "pending",
+      "user": "692920a26005002d5c0871f0",
+      "clientSecret": "someRandomValue",
+      "createdAt": "2025-12-12T01:05:52.627Z",
+      "updatedAt": "2025-12-12T01:05:52.627Z",
+      "__v": 0
+    },
+    {
+      "_id": "693bc00364d80a27135a695b",
+      "tax": 499,
+      "shippingFee": 799,
+      "subtotal": 80037,
+      "total": 81335,
+      "orderItems": [
+        {
+          "name": "Product 1",
+          "image": "/uploads/example.jpeg",
+          "price": 25999,
+          "amount": 3,
+          "product": "69336c3e9b2af5d54e5235c9",
+          "_id": "693bc00364d80a27135a695c"
+        },
+        {
+          "name": "Product 2",
+          "image": "/uploads/example.jpeg",
+          "price": 1020,
+          "amount": 2,
+          "product": "69389f902fa68d29032fcf41",
+          "_id": "693bc00364d80a27135a695d"
+        }
+      ],
+      "status": "pending",
+      "user": "692920a26005002d5c0871f0",
+      "clientSecret": "someRandomValue",
+      "createdAt": "2025-12-12T07:10:59.394Z",
+      "updatedAt": "2025-12-12T07:10:59.394Z",
+      "__v": 0
+    },
+    {
+      "_id": "693bcbc9dce8a4f25e1dc654",
+      "tax": 499,
+      "shippingFee": 799,
+      "subtotal": 80037,
+      "total": 81335,
+      "orderItems": [
+        {
+          "name": "Product 1",
+          "image": "/uploads/example.jpeg",
+          "price": 25999,
+          "amount": 3,
+          "product": "69336c3e9b2af5d54e5235c9",
+          "_id": "693bcbc9dce8a4f25e1dc655"
+        },
+        {
+          "name": "Product 2",
+          "image": "/uploads/example.jpeg",
+          "price": 1020,
+          "amount": 2,
+          "product": "69389f902fa68d29032fcf41",
+          "_id": "693bcbc9dce8a4f25e1dc656"
+        }
+      ],
+      "status": "paid",
+      "user": "692920a26005002d5c0871f0",
+      "clientSecret": "someRandomValue",
+      "createdAt": "2025-12-12T08:01:13.571Z",
+      "updatedAt": "2025-12-12T08:06:38.948Z",
+      "__v": 0,
+      "paymentIntentId": "someRandomId"
+    },
+    {
+      "_id": "6942178a980fa7a7cfee4d9a",
+      "tax": 499,
+      "shippingFee": 799,
+      "subtotal": 80037,
+      "total": 81335,
+      "orderItems": [
+        {
+          "name": "product 1",
+          "image": "/uploads/example.jpeg",
+          "price": 25999,
+          "amount": 3,
+          "product": "69336c3e9b2af5d54e5235c9",
+          "_id": "6942178a980fa7a7cfee4d9b"
+        },
+        {
+          "name": "Product 2",
+          "image": "/uploads/example.jpeg",
+          "price": 1020,
+          "amount": 2,
+          "product": "69389f902fa68d29032fcf41",
+          "_id": "6942178a980fa7a7cfee4d9c"
+        }
+      ],
+      "status": "paid",
+      "user": "6940ca4723ef202a8e7e124a",
+      "clientSecret": "someRandomValue",
+      "createdAt": "2025-12-17T02:38:02.544Z",
+      "updatedAt": "2025-12-19T03:06:31.206Z",
+      "__v": 0
+    },
+    {
+      "_id": "6943852cccf0f88277abfe60",
+      "tax": 499,
+      "shippingFee": 799,
+      "subtotal": 11040,
+      "total": 12338,
+      "orderItems": [
+        {
+          "name": "product 1 updated",
+          "image": "/uploads/example.jpeg",
+          "price": 3000,
+          "amount": 3,
+          "product": "69336c3e9b2af5d54e5235c9",
+          "_id": "6943852cccf0f88277abfe61"
+        },
+        {
+          "name": "Product 2",
+          "image": "/uploads/example.jpeg",
+          "price": 1020,
+          "amount": 2,
+          "product": "69389f902fa68d29032fcf41",
+          "_id": "6943852cccf0f88277abfe62"
+        }
+      ],
+      "status": "pending",
+      "user": "6940c9c723ef202a8e7e1242",
+      "clientSecret": "someRandomValue",
+      "createdAt": "2025-12-18T04:38:04.930Z",
+      "updatedAt": "2025-12-18T04:38:04.930Z",
+      "__v": 0
+    },
+    {
+      "_id": "694385dfccf0f88277abfe66",
+      "tax": 499,
+      "shippingFee": 799,
+      "subtotal": 11040,
+      "total": 12338,
+      "orderItems": [
+        {
+          "name": "product 1 updated",
+          "image": "/uploads/example.jpeg",
+          "price": 3000,
+          "amount": 3,
+          "product": "69336c3e9b2af5d54e5235c9",
+          "_id": "694385dfccf0f88277abfe67"
+        },
+        {
+          "name": "Product 2",
+          "image": "/uploads/example.jpeg",
+          "price": 1020,
+          "amount": 2,
+          "product": "69389f902fa68d29032fcf41",
+          "_id": "694385dfccf0f88277abfe68"
+        }
+      ],
+      "status": "pending",
+      "user": "6940c9c723ef202a8e7e1242",
+      "clientSecret": "someRandomValue",
+      "createdAt": "2025-12-18T04:41:03.074Z",
+      "updatedAt": "2025-12-18T04:41:03.074Z",
+      "__v": 0
+    },
+    {
+      "_id": "69438747ccf0f88277abfe6c",
+      "tax": 499,
+      "shippingFee": 799,
+      "subtotal": 11040,
+      "total": 12338,
+      "orderItems": [
+        {
+          "name": "product 1 updated",
+          "image": "/uploads/example.jpeg",
+          "price": 3000,
+          "amount": 3,
+          "product": "69336c3e9b2af5d54e5235c9",
+          "_id": "69438747ccf0f88277abfe6d"
+        },
+        {
+          "name": "Product 2",
+          "image": "/uploads/example.jpeg",
+          "price": 1020,
+          "amount": 2,
+          "product": "69389f902fa68d29032fcf41",
+          "_id": "69438747ccf0f88277abfe6e"
+        }
+      ],
+      "status": "pending",
+      "user": "6940c9c723ef202a8e7e1242",
+      "clientSecret": "someRandomValue",
+      "createdAt": "2025-12-18T04:47:03.529Z",
+      "updatedAt": "2025-12-18T04:47:03.529Z",
+      "__v": 0
+    },
+    {
+      "_id": "6944bf122f5ae32b85764a68",
+      "tax": 250,
+      "shippingFee": 500,
+      "subtotal": 33197,
+      "total": 33947,
+      "orderItems": [
+        {
+          "name": "Ergonomic Office Chair",
+          "image": "/uploads/example.jpeg",
+          "price": 18999,
+          "amount": 1,
+          "product": "6944bb1b2f5ae32b85764a4e",
+          "_id": "6944bf122f5ae32b85764a69"
+        },
+        {
+          "name": "Modern Accent Chair",
+          "image": "/uploads/example.jpeg",
+          "price": 2599,
+          "amount": 2,
+          "product": "69436c8d4b2d5e0ffa224980",
+          "_id": "6944bf122f5ae32b85764a6a"
+        },
+        {
+          "name": "product 1 updated",
+          "image": "/uploads/example.jpeg",
+          "price": 3000,
+          "amount": 3,
+          "product": "69336c3e9b2af5d54e5235c9",
+          "_id": "6944bf122f5ae32b85764a6b"
+        }
+      ],
+      "status": "pending",
+      "user": "6940ca4723ef202a8e7e124a",
+      "clientSecret": "someRandomValue",
+      "createdAt": "2025-12-19T02:57:22.702Z",
+      "updatedAt": "2025-12-19T02:57:22.702Z",
+      "__v": 0
+    }
+  ],
+  "count": 9
+}
+STEP: Get All Orders (Admin) - Finished at 2025-12-19 03:22:11 AM
+=====================================================
+
+
+===============================
+STEP: Admin Logout
+COMMAND: curl -s -X DELETE https://ecommerce-api-nodejs-2gmv.onrender.com/api/v1/auth/logout
+OUTPUT:
+{
+  "msg": "user logged out!"
+}
+STEP: Admin Logout - Finished at 2025-12-19 03:23:00 AM
+=====================================================
+
+
