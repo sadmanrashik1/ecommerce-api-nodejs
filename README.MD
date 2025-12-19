@@ -44,7 +44,7 @@ Edit and run the included `test-api.sh` script for a full end-to-end test of the
 ```bash
 chmod +x test-api.sh
 ./test-api.sh
-
+```
 
 ##  Local Postman  Steps:
 - Local Postman Application + hosted onrender api
