@@ -17,7 +17,7 @@ const authenticateUser = async (req, res, next) => {
       refreshToken: payload.refreshToken,
     });
     if (!existingToken || !existingToken?.isValid) {
-      throw new CustomError.UnauthenticatedError("Authentication invalid1");
+      throw new CustomError.UnauthenticatedError("Authentication invalid");
     }
     attachCookiesToResponse({
       res,
@@ -27,7 +27,7 @@ const authenticateUser = async (req, res, next) => {
     req.user = payload.user;
     next();
   } catch (error) {
-    throw new CustomError.UnauthenticatedError("Authentication Invalid2");
+    throw new CustomError.UnauthenticatedError("Authentication Invalid");
   }
 };
 
