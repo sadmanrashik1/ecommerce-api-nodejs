@@ -3,11 +3,19 @@
   
 
 **Repository**: [https://github.com/sadmanrashik1/ecommerce-api-nodejs](https://github.com/sadmanrashik1/ecommerce-api-nodejs)
-##  Testing api Using Bash Script(reliable+fastest)
-**Script**: `./autoTestsBash/test-api.sh`  
-**Purpose**: automated end-to-end testing of the E-Commerce API using **bash + curl + jq**.  
-**Runs on**: Linux, macOS, Windows (cygWin, WSL or Git Bash)
 
+## Testing API Using Bash Script (Reliable + Fastest)
+
+### Script
+`./autoTestsBash/test-api.sh`
+
+### Purpose
+Automated end-to-end testing of the E-Commerce API using **bash + curl + jq**.
+
+### Runs On
+Linux, macOS, Windows (Cygwin, WSL, or Git Bash)
+
+### Description
 This script demonstrates a complete test flow including:
 - Admin and regular user sessions
 - Public routes
@@ -18,18 +26,25 @@ This script demonstrates a complete test flow including:
 
 It uses cookie persistence (`cookies.txt`) to maintain sessions, just like a real browser.
 
-## Features
-- **Structured logging** with timestamps (12-hour format with AM/PM)
-- **Live terminal output** + full log saved to `outputLog.txt`
-- **Reusable wrapper function** (`api_request`) for clean, consistent calls
-- **Cookie handling** for authenticated routes
-- **Pretty JSON output** with `jq`
-- **Sleep delays** for readability
+### Features
+- Structured logging with timestamps (12-hour format with AM/PM)
+- Live terminal output + full log saved to `outputLog.txt`
+- Reusable wrapper function (`api_request`) for clean, consistent calls
+- Cookie handling for authenticated routes
+- Pretty JSON output with `jq`
+- Sleep delays for readability
 
-## Requirements
+### Requirements
 - `curl`
 - `jq` (for pretty JSON – install with `brew install jq` or `apt install jq`)
 - Bash shell
+
+### How to Run
+Edit and run the included `test-api.sh` script for a full end-to-end test of the API:
+```bash
+chmod +x test-api.sh
+./test-api.sh
+
 
 ##  Local Postman  Steps:
 - Local Postman Application + hosted onrender api
